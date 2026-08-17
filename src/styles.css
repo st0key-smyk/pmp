@@ -1,0 +1,158 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Manrope", ui-sans-serif, sans-serif;
+  --shadow-soft: 0 2px 8px -2px oklch(0.32 0.06 150 / 0.08), 0 12px 28px -12px oklch(0.32 0.06 150 / 0.16);
+  --shadow-lift: 0 8px 20px -6px oklch(0.32 0.06 150 / 0.14), 0 24px 48px -20px oklch(0.32 0.06 150 / 0.22);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.26 0.012 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.012 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.012 250);
+  --primary: oklch(0.47 0.115 148);
+  --primary-foreground: oklch(0.99 0.005 140);
+  --primary-dark: oklch(0.29 0.075 150);
+  --secondary: oklch(0.96 0.025 140);
+  --secondary-foreground: oklch(0.33 0.08 150);
+  --muted: oklch(0.965 0.015 140);
+  --muted-foreground: oklch(0.48 0.02 250);
+  --accent: oklch(0.93 0.045 140);
+  --accent-foreground: oklch(0.33 0.08 150);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.91 0.015 145);
+  --input: oklch(0.89 0.015 145);
+  --ring: oklch(0.47 0.115 148);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@utility btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.875rem 1.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@utility btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-soft);
+  &:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+}
+
+@utility btn-outline {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  &:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+  }
+}
+
+@utility btn-on-dark {
+  background-color: transparent;
+  color: var(--primary-foreground);
+  border: 2px solid oklch(1 0 0 / 0.7);
+  &:hover {
+    background-color: oklch(1 0 0 / 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+@utility section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @media (min-width: 768px) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
