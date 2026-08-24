@@ -17,7 +17,7 @@ export function Contact() {
     const err: Errors = {};
     if (values.name.trim().length < 2) err.name = "Zadejte prosím své jméno.";
     if (!/^(\+?\d[\d\s]{8,})$/.test(values.phone.trim()))
-      err.phone = "Zadejte platné telefonní číslo, např. +420 777 123 456.";
+      err.phone = "Zadejte platné telefonní číslo, např. +420 776 035 726.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(values.email.trim()))
       err.email = "Zadejte platnou e-mailovou adresu.";
     if (values.message.trim().length < 10) err.message = "Popište prosím krátce, co potřebujete.";

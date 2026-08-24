@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "PMP služby",
           description,
-          telephone: "+420777123456",
+          telephone: "+420776035726",
           email: "info@pmpsluzby.cz",
           url: "https://pmpsluzby.cz",
           areaServed: ["Stará Boleslav", "Brandýs nad Labem", "Praha", "Středočeský kraj"],
