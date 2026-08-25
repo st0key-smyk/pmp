@@ -3,7 +3,7 @@ export const site = {
   ico: "22467815",
   phone: "+420 776 035 726",
   phoneHref: "tel:+420776035726",
-  email: "info-pmp@pmpsluzby.cz",
+  email: "info@pmpsluzby.cz",
   area: "Stará Boleslav, Praha a Středočeský kraj",
   areaLong:
     "Stará Boleslav, Brandýs nad Labem, Praha a celý Středočeský kraj – po dohodě dojedeme skoro kamkoli.",
