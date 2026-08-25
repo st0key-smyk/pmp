@@ -21,6 +21,7 @@ const reasons = [
   },
 ];
 
+
 export function About() {
   return (
     <section id="o-nas" className="section-pad bg-background">

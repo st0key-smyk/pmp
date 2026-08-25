@@ -37,7 +37,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           className="text-primary-foreground mt-5 text-4xl leading-[1.05] sm:text-6xl lg:text-7xl"
         >
-          Zahradnické a údržbářské práce
+          Zahradnické a technické služby
         </motion.h1>
 
         <motion.p
@@ -46,9 +46,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.26 }}
           className="text-primary-foreground/90 mx-auto mt-6 max-w-2xl text-lg sm:text-xl"
         >
-          Posekáme trávník, zastřihneme živý plot, postavíme plot i terasu, vymalujeme, vyklidíme
-          a odvezeme odpad. Zvládneme skoro vše, co se týče práce rukama – s týmem{" "}
-          {site.workers} lidí i ve krátkém termínu.
+          Posekáme trávník, zastřihneme živý plot, dokončíme stavební práci nebo ji začneme od začátku, vyklidíme
+          a odvezeme odpad. Zvládneme skoro vše, co se týče práce rukama – s profesionálním týmem{" "}
+          
         </motion.p>
 
         <motion.div
